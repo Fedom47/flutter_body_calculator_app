@@ -16,11 +16,13 @@ class _SplashScreeenUiState extends State<SplashScreeenUi> {
     Future.delayed(
 //เวลาที่หน่วง
       Duration(seconds: 3),
+      //ฟังก์ชันที่ทำงานหลังจากหน่วง
       () {
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
             builder: (context) => HomeUi(),
+            //เปิดหน้าhomeUI
           ),
           );
       },
