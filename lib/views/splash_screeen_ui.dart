@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'home_ui.dart';
 
 class SplashScreeenUi extends StatefulWidget {
   const SplashScreeenUi({super.key});
@@ -8,6 +9,23 @@ class SplashScreeenUi extends StatefulWidget {
 }
 
 class _SplashScreeenUiState extends State<SplashScreeenUi> {
+
+  @override
+  void initState() {
+    // หน่วงเลาลาหน้าจอ3วินาทีแล้วไปหน้าhomeUI แบบย้อนกลับไม่ได้
+    Future.delayed(
+//เวลาที่หน่วง
+      Duration(seconds: 3),
+      () {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => HomeUi(),
+          ),
+          );
+      },
+    );
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +65,7 @@ class _SplashScreeenUiState extends State<SplashScreeenUi> {
                 color: Colors.white,
               ),
             ),
-             SizedBox(height: 40),
+            SizedBox(height: 30),
             CircularProgressIndicator(),
           ],
         ),
