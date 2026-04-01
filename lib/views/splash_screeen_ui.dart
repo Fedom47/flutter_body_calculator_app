@@ -9,12 +9,11 @@ class SplashScreeenUi extends StatefulWidget {
 }
 
 class _SplashScreeenUiState extends State<SplashScreeenUi> {
-
   @override
   void initState() {
     // หน่วงเลาลาหน้าจอ3วินาทีแล้วไปหน้าhomeUI แบบย้อนกลับไม่ได้
     Future.delayed(
-//เวลาที่หน่วง
+      //เวลาที่หน่วง
       Duration(seconds: 3),
       //ฟังก์ชันที่ทำงานหลังจากหน่วง
       () {
@@ -24,10 +23,11 @@ class _SplashScreeenUiState extends State<SplashScreeenUi> {
             builder: (context) => HomeUi(),
             //เปิดหน้าhomeUI
           ),
-          );
+        );
       },
     );
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

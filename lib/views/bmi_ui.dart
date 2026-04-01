@@ -70,7 +70,7 @@ class _BmiUiState extends State<BmiUi> {
                   ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.redAccent,
-                    fixedSize: Size(MediaQuery.of(context).size.width, 50),
+                    fixedSize: Size(MediaQuery.of(context).size.width,50),
                   ),
                 ),
                 SizedBox(height: 20),
